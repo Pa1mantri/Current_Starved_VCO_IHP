@@ -41,23 +41,24 @@ After doing transient simulation frequency=0.9GHz
 
 <img width="1843" height="917" alt="Image" src="https://github.com/user-attachments/assets/cbcae399-6dbf-4f2d-83ad-bb1fb92696fd" />
 
-Output waveform at Vctrl=2v frequency of 565MHz
+Output waveform at Vctrl=3v frequency of 0.97GHz
 
+<img width="1845" height="919" alt="Image" src="https://github.com/user-attachments/assets/60fec00a-e878-4190-88ab-7aba7af57795" />
+
+Output waveform at Vctrl=2v frequency of 565MHz
 
 <img width="1848" height="917" alt="Image" src="https://github.com/user-attachments/assets/8b579734-0d2a-495e-9557-be1a4c501930" />
 
-Output waveform at Vctrl=3v frequency of 0.91GHz
-
-
 Netlist file (Spice deck) of VCO:
 
-
-
+<img width="1846" height="890" alt="Image" src="https://github.com/user-attachments/assets/3c8dc013-00ab-4d19-90f1-713f569c630a" />
 
 
 ## Specification table
 
 <img width="838" height="530" alt="Image" src="https://github.com/user-attachments/assets/3311a9e2-60ac-4a7b-b8a0-1eb5e93dc3e2" />
+
+Power consumption of about 1.65mW calculated at Vctrl of 2V.
 
 
 <img width="1080" height="720" alt="Image" src="https://github.com/user-attachments/assets/99678a61-f0d3-4649-b474-21e081c1dc96" />
@@ -73,6 +74,10 @@ Before designing a current starved VCO using a three stage inverter in a loop, I
     Inverter schematic in eSim tool
     
 <img width="1849" height="867" alt="Image" src="https://github.com/user-attachments/assets/0cf3d9dd-2cd0-4c06-a148-39fb5271b829" />
+
+Inverter netlist file 
+
+<img width="1846" height="892" alt="Image" src="https://github.com/user-attachments/assets/f89e92ab-1a66-4059-b9f4-308172c417ca" />
 
     Propagation delay with a load of 10pf is 50.5Ps at Wp=3.7Wn
     
@@ -98,6 +103,8 @@ Before designing a current starved VCO using a three stage inverter in a loop, I
  2. A. R. Patil, "Design of Current Starved VCO Using SkyWater 130 nm PDK," International Research Journal of Engineering and Technology (IRJET), vol. 5, no. 3, pp. 1231–1234, Mar. 2018. [Online]. Available:
  https://www.irjet.net/archives/V5/i3/IRJET-V5I3191.pdf
  3. eSim User Manual, FOSSEE, IIT Bombay. [Online]. Available: https://esim.fossee.in/documentation
+
+
 
 
 
