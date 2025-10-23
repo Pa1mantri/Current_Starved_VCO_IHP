@@ -1,0 +1,8 @@
+.title KiCad schematic
+M1 OUT IN GND GND eSim_MOS_N
+M2 OUT IN Net-_M2-Pad3_ Net-_M2-Pad3_ eSim_MOS_P
+U1 IN plot_v1
+U2 OUT plot_v1
+v2 IN GND pulse
+v1 Net-_M2-Pad3_ GND DC
+.end

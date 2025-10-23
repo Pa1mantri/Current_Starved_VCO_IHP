@@ -1,0 +1,28 @@
+.title kicad schematic
+
+*.include NMOS-0.5um.lib
+*.include PMOS-0.5um.lib
+.lib /home/fossee/ihp/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
+
+xm1 out in gnd gnd sg13_hv_nmos
+xm2 out in net-_m2-pad3_ net-_m2-pad3_ sg13_hv_pmos 
+* u1 in plot_v1
+* u2 out plot_v1
+v2 in gnd pulse(0 3.3 0.1n 0.1n 0.1n 10m 20m)
+v1 net-_m2-pad3_ gnd  dc 3.3
+.tran 0.1e-03 100e-03 0e-00
+
+.control
+pre_osdi /home/fossee/ihp/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/osdi/psp103.osdi
+pre_osdi /home/fossee/ihp/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/osdi/psp103_nqs.osdi
+.endc
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(in)
+plot v(out)
+.endc
+.end

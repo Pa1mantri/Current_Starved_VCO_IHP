@@ -1,0 +1,44 @@
+.title kicad schematic
+
+.control
+pre_osdi /home/fossee/ihp/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/osdi/psp103.osdi
+pre_osdi /home/fossee/ihp/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/osdi/psp103_nqs.osdi
+.endc
+
+.lib /home/fossee/ihp/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
+
+
+xm1 out in gnd gnd sg13_hv_nmos W=1u L=0.35u
+xm2 out in net-_m2-pad3_ net-_m2-pad3_ sg13_hv_pmos W=3.7u L=0.35u
+cload out gnd 10f
+* u1 in plot_v1
+* u2 out plot_v1
+v2 in gnd pulse(0 3.3 0.1n 0.1n 0.1n 10n 20n)
+*for DC sweep analysis using fixed DC source
+*v2 in gnd 0
+
+v1 net-_m2-pad3_ gnd  dc 3.3
+.tran 0.1e-06 60e-06 0e-00
+
+* sweeping the input from 0 to 3.3
+*.dc v2 0 3.3 0.01
+
+
+
+
+
+* Control Statements 
+.control
+run
+meas tran tphl TRIG v(in) VAL=1.65 RISE=1  TARG v(out) VAL=1.65 FALL=1
+meas tran tplh TRIG v(in) VAL=1.65 FALL=1  TARG v(out) VAL=1.65 RISE=1
+let tpd  =(tphl+tplh)/2
+meas tran trise  TRIG v(out) VAL=0.33 RISE=1  TARG v(out) VAL=2.97 RISE=1
+meas tran tfall  TRIG v(out) VAL=2.97 FALL=1  TARG v(out) VAL=0.33 FALL=1
+*print allv > plot_data_v.txt
+*print alli > plot_data_i.txt
+print tphl tplh tpd trise tfall
+plot v(in)
+plot v(out)
+.endc
+.end
