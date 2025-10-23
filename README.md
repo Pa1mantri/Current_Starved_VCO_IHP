@@ -56,9 +56,17 @@ Netlist file (Spice deck) of VCO:
 
 ## Specification table
 
-<img width="838" height="530" alt="Image" src="https://github.com/user-attachments/assets/3311a9e2-60ac-4a7b-b8a0-1eb5e93dc3e2" />
-
-Power consumption of about 1.65mW calculated at Vctrl of 2V.
+| Parameter                 | Symbol | Value      | Remarks                                         |
+| :------------------------:| :-----:| :---------:| :-----------------------------------------------|
+|Technology                 |        | 130-nm CMOS| IHP SG13G2                                      |
+|Supply Voltage             |  VDD   |  3.3V      | HV(High Voltage, Thick oxide CMOS               |
+|Operating Temperaure Range |  T     |   27C      | Characterized at room temperature (-40C to +125C|
+|Control Voltage            | Vctrl  |  1.2V-3    | Maximum linearity observed in this range        |
+|Output VCO Frequency       | Vout   | 120MHz-1GHz| Maximum frequency of 1.03GHz                    |
+|Centre frequency           |  fo    |  550MHz    | @Vctrl = 2V                                     |
+|Frequenct Range            |  Δ𝑓    |   1GHz     | Wide tuning range                               |
+|VCO gain                   | KVCO   |   496MHz/V | Linear in 1.2-3V range                          | 
+|Power consumption          |  Pavg  | 1.65mW     | At VDD=3.3V, Vctrl=2.0V                         |
 
 
 <img width="1080" height="720" alt="Image" src="https://github.com/user-attachments/assets/99678a61-f0d3-4649-b474-21e081c1dc96" />
@@ -90,12 +98,12 @@ Inverter netlist file
 
 ## Conclusion
 
- In this work, a VCO with enhanced frequency performance is presented. The circuit achieves a maximum frequency of 1 GHz while consuming only 1.65 mW of power from a 3.3 V DC supply. The center oscillation frequency, currently 550 MHz, is primarily influenced by transistor sizing. These results highlight the potential of the proposed VCO design for integration into phase-locked loops (PLLs) requiring energy efficiency and a wide tuning range.
+ In this work, a VCO with enhanced frequency performance is presented. The circuit achieves a maximum frequency of 1 GHz while consuming only 1.65 mW of power from a 3.3 V DC supply. The center oscillation frequency, currently 550 MHz, is primarily influenced by transistor sizing. These results highlight the potential of the proposed VCO design for integration into phase-locked loops (PLLs) requiring energy efficiency and a wide tuning range.  Future integration of this VCO with a charge pump and loop filter will complete the PLL design, enabling closed-loop verification of locking behavior and overall system stability.
  
 ## Acknowledgement
 
-1. Sumanto kar, fossee team
-2. 
+1. eSim,fossee team,IITB
+2. Sumanto kar, Assistant Project Manager, FOSSEE, IITB.
 
 ## References
 
