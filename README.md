@@ -78,7 +78,7 @@ Netlist file (Spice deck) of VCO:
 |Output VCO Frequency       | Vout   | 120MHz-1GHz| Maximum frequency of 1.03GHz                    |
 |Centre frequency           |  fo    |  550MHz    | @Vctrl = 2V                                     |
 |Frequenct Range            |  Δ𝑓    |   1GHz     | Wide tuning range                               |
-|VCO gain                   | KVCO   |   496MHz/V | Linear in 1.2-3V range                          | 
+|VCO gain                   | KVCO   |   472MHz/V | Linear in 1.2-3V range                          | 
 |Power consumption          |  Pavg  | 1.65mW     | At VDD=3.3V, Vctrl=2.0V                         |
 
 
