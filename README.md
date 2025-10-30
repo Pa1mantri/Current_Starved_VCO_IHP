@@ -86,7 +86,10 @@ Netlist file (Spice deck) of VCO:
 
 R² value determines the linearity. R²=1 means perfectly linear relation. In the graph above R² = 0.983 (all data) R² = 0.988 (for 1.2 V – 3.0 V range). That means output frequency changes almost linearly with control voltage over usable tuning range. This linearty is a prerequisite for the VCO to be used in a PLL.
 
-KVCO is the gain of the oscillator. For every +1 V increase in Vctrl, the oscillation frequency increases by ≈ 0.5 GHz (496 MHz). That's the sensitivity of the oscillator.
+KVCO is the gain of the oscillator. For every +1 V increase in Vctrl, the oscillation frequency increases by 472 MHz. That's the sensitivity of the oscillator.
+
+Control Voltage Vs Frequency table for the entire range of values from 0.8V-3.3V is present in the table [Vctrl vs frequency table](VCO_2/Vctrl%20vs%20Freq_table.txt)
+
 
 ## Inverter characterization 
 
