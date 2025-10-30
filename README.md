@@ -18,6 +18,16 @@ Block-diagram of VCO:
 
 <img width="1106" height="653" alt="Image" src="https://github.com/user-attachments/assets/82057109-0639-4b07-b530-c7a562216872" />
 
+The frequency of the Voltage Controlled Oscillator is expressed in terms of centre frquency using the formula  
+
+fout is the output frequency of the VCO. 
+
+fcenter (centre frequency) - The point where your circuit is designed to operate most linearly and stably.
+
+Vcontrol is the applied control voltage.(Vctrl)
+
+Vcenter is the control voltage corresponding to the centre frequency.
+
 
 ## Design Schematic
 
