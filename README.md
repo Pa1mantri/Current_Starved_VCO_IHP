@@ -114,6 +114,20 @@ Inverter netlist file
     
 <img width="1852" height="870" alt="Image" src="https://github.com/user-attachments/assets/f87083a9-bc1c-40ab-90bb-afd2fcbf0acf" />
 
+## Characteristics table of the inverter
+
+| Characteristics           | Symbol | Value      | 
+| :------------------------:| :-----:| :---------:| 
+|Rise delay                 |  Tr    |  65.76ps   | 
+|Fall delay                 |  Tf    |  79.23ps   |   
+|Propagation delay          |  Tpd   |  50.530ps  | 
+|Gain                       |  Av    |  22.59     | 
+|Transconductance           |  gm    |  0.235mS   |
+|Drain Current              |  ID    |  0.213mA   | 
+|NMH                        | Voh-Vih|  1.39      | 
+|NML                        | Vil-Vol|  1.40      |
+|Threshold Voltage          | Vm     |  1.65      | 
+
 
 ## Conclusion
 
