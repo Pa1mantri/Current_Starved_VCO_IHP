@@ -42,6 +42,9 @@ A ring oscillator consists of an odd number of delay stages connected in a loop,
 
  At the end, two inverters connected back to back to form a buffer. Transistors M15,M16,M17,M18 forms a buffer. V1 provides the Vdd and V2 is the Vctrl(control voltage).
 
+ ## Why Limiting transistors are used
+ Although the introduction of current-limiting transistors significantly reduces the oscillation frequency compared to a standard inverter—because the drastic reduction in charging current (the "narrower pipe") far outweighs the benefit of any minor reduction in effective load capacitance—we intentionally choose this "current-starved" topology to gain electrical tunability. While a standard inverter's delay is rigidly fixed by its physical fabrication parameters (such as channel width, length, and oxide thickness), limiting transistors decouple the delay from these static properties and make it dependent on a dynamic control voltage (VCTRL). This allows us to actively modulate the current flow and, consequently, the oscillation frequency on the fly, transforming a fixed-frequency circuit into a flexible Voltage Controlled Oscillator (VCO) that can lock onto different frequencies as needed.
+
  
 ## Simulation
 
